@@ -71,10 +71,11 @@ function ReactionMovies(status){
     setMovie(copyAllMovies)
 }
 
-function AddMovie(newMovie){
+function AddMovie(newMovie,style){
     console.log(newMovie)
     const AddMovie={
         name: newMovie,
+        genre: style,
         reaction:false }
 
        setMovie([...movie,AddMovie]) 

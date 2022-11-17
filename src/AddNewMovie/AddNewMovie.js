@@ -41,7 +41,7 @@ function AddNewMovie({onNewMovie}){
             <label>Add genre:</label>
             <input placeholder='Add genre' type='text' value={style} onChange={AddGenre}></input>
             <label>Add main actors:</label>
-            <input placeholder='Main actors' type='text' onChange={AddMainActor} value={actor}></input>
+            <input placeholder='Main actors' type='search' onChange={AddMainActor} value={actor}></input>
             <button onClick={NewMovie}>Add</button>
            
             

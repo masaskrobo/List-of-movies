@@ -9,47 +9,47 @@ function ListOfMovies(){
     {  
         name: 'Avatar',
         genre: 'sci-fi action',
-        mainActor: 'Sam Worthington',
+        mainActor: ['Sam Worthington'],
         reaction: false
     },
     {
         name: 'The Nutty Professor',
         genre: 'comedy',
-        mainActor: 'Eddie Murphy',
+        mainActor: ['Eddie Murphy'],
         reaction: false
     },
     {
         name:'The Strangers',
         genre: 'horror',
-        mainActor:'Liv Tyler',
+        mainActor:['Liv Tyler'],
         reaction: true
     },
     {
         name:'Notebook',
         genre: 'romantic',
-        mainActor: 'Ryan Gosling, Rachel McAdams',
+        mainActor:['Ryan Gosling, Rachel McAdams'],
         reaction: false
     },
     {
         name: 'Labyrinth',
         genre: 'fanstasy',
-        mainActor: 'David Bowie',
+        mainActor: ['David Bowie'],
         reaction: true
     },
     {
         name:'Night at the Museum',
         genre:'comedy',
-        mainActor:'Ben Stiller',
+        mainActor:['Ben Stiller'],
         reaction: false
     },{
         name: 'Pinocchio',
         genre: 'musical fantasy',
-        mainActor: 'Tom Hanks',
+        mainActor: ['Tom Hanks'],
         reaction: true
     },
     {  name: 'Jumanji',
        genre: 'fantasy adventure',
-       mainActor: 'Dwayne Johnson',
+       mainActor: ['Dwayne Johnson'],
        reaction: false
     },
 ]
@@ -71,12 +71,12 @@ function ReactionMovies(status){
     setMovie(copyAllMovies)
 }
 
-function AddMovie(newMovie,style,actor){
+function AddMovie(newMovie,style,[actor]){
     console.log(newMovie)
     const AddMovie={
         name: newMovie,
         genre: style,
-        mainActor: actor,
+        mainActor:[actor],
         reaction:false }
 
        setMovie([...movie,AddMovie]) 

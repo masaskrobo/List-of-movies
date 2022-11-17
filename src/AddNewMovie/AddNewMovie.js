@@ -3,7 +3,12 @@ import React, { useState } from 'react';
 function AddNewMovie({onNewMovie}){
     const[newMovie,setNewMovie]=useState('');
     const[style, setNewStyle]=useState('');
-    const[actor,setNewActor]=useState('');
+    
+
+    const Actors = ['Johnny Depp', 'Will Smith', 'Leonardo DiCaprio', 'Angelina Jolie', 'Robin Williams', 'Sandra Bullock', 'Meryl Streep', 
+    'Julia Roberts']
+    
+    const[actor,setNewActor]=useState(Actors);
 
     function AddText(event){
         setNewMovie(event.target.value)

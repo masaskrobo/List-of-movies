@@ -1,4 +1,4 @@
-import Tools from '../Movies/Movies.js';
+import Movies from '../Movies/Movies.js';
 import AddNewMovie from '../AddNewMovie/AddNewMovie';
 
 import React, {useState} from 'react';
@@ -27,7 +27,7 @@ function ListOfMovies(){
     {
         name:'Notebook',
         genre: 'romantic',
-        mainActor:['Ryan Gosling, Rachel McAdams'],
+        mainActor:['Ryan Gosling','Rachel McAdams'],
         reaction: false
     },
     {
@@ -87,8 +87,11 @@ function AddMovie(newMovie,style,[actor]){
         <div>
             <p>List of Movies</p>
             <AddNewMovie onNewMovie={AddMovie}/>
+            {movie[mainActor].map(function(movie){
+                return <Movies onActor={movie}/>
+            } )}
             {movie.map(function(item,index){
-                return <Tools  onReaction={ReactionMovies} onDelete={DeleteMovie} ordinalNumber={index} onMovies={item}/>
+                return <Movies  onReaction={ReactionMovies} onDelete={DeleteMovie} ordinalNumber={index} onMovies={item}/>
             }
             )}
         </div>

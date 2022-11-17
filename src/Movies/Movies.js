@@ -1,12 +1,14 @@
 
-function Movies({onMovies, onDelete,ordinalNumber,onReaction,onActor}){
+function Movies({onMovies, onDelete,ordinalNumber,onReaction}){
     return(
         <div>
-           
+          
             <p>{onMovies.name}</p>
             <p>{onMovies.genre}</p>
-            <p>{onMovies.mainActor}</p>
-            <p>{onActor.mainActor}</p>
+           
+            {onMovies.mainActor.map(function(actor){
+                   return  <p>{actor}</p>
+            })}
             <button onClick={()=>{onDelete(ordinalNumber)}}>Delete Movie</button>
             <button onClick={()=>{onReaction(ordinalNumber)}}>{onMovies.reaction ? 'like' : 'dislike'}</button>
          

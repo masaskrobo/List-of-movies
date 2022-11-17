@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 
 function ListOfMovies(){
 
-    const Movies = [
+    const initalList = [
     {  
         name: 'Avatar',
         genre: 'sci-fi action',
@@ -54,7 +54,7 @@ function ListOfMovies(){
     },
 ]
 
-const[movie,setMovie]=useState(Movies)
+const[movie,setMovie]=useState(initalList)
 
 function DeleteMovie(deleteThisMovie){
     const copyMovies=[...movie]
@@ -87,9 +87,6 @@ function AddMovie(newMovie,style,[actor]){
         <div>
             <p>List of Movies</p>
             <AddNewMovie onNewMovie={AddMovie}/>
-            {movie[mainActor].map(function(movie){
-                return <Movies onActor={movie}/>
-            } )}
             {movie.map(function(item,index){
                 return <Movies  onReaction={ReactionMovies} onDelete={DeleteMovie} ordinalNumber={index} onMovies={item}/>
             }

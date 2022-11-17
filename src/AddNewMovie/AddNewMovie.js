@@ -3,12 +3,18 @@ import React, { useState } from 'react';
 function AddNewMovie({onNewMovie}){
     const[newMovie,setNewMovie]=useState('');
     const[style, setNewStyle]=useState('');
-    
+    const[actor,setNewActor]=useState('');
+    const[actors,setActors]=useState([])
+   
 
     const Actors = ['Johnny Depp', 'Will Smith', 'Leonardo DiCaprio', 'Angelina Jolie', 'Robin Williams', 'Sandra Bullock', 'Meryl Streep', 
     'Julia Roberts']
+
+    {Actors.map(function(act){
+       return <p>{act}</p>
+    })}
     
-    const[actor,setNewActor]=useState(Actors);
+    
 
     function AddText(event){
         setNewMovie(event.target.value)
@@ -21,14 +27,20 @@ function AddNewMovie({onNewMovie}){
     function AddMainActor(event){
         setNewActor(event.target.value)
     }
+   
     
     
     function NewMovie(){
-        onNewMovie(newMovie,style,actor)
+        onNewMovie(newMovie,style,actor,actors)
         setNewMovie('');
         setNewStyle('');
         setNewActor('');
+        setActors('')
 
+    }
+    function AddActors(actor){
+        Actors.push(actor)
+        
     }
    
    
@@ -41,8 +53,9 @@ function AddNewMovie({onNewMovie}){
             <label>Add genre:</label>
             <input placeholder='Add genre' type='text' value={style} onChange={AddGenre}></input>
             <label>Add main actors:</label>
-            <input placeholder='Main actors' type='search' onChange={AddMainActor} value={actor}></input>
+            <input placeholder='Main actors' type='text' onChange={AddMainActor} value={actor}></input>
             <button onClick={NewMovie}>Add</button>
+            <button onClick={AddActors}>Add Actor</button>
            
             
         </div>

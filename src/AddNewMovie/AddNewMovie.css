@@ -41,6 +41,11 @@
     margin-right:10px ;
 
 }
+.add_actors{
+   font-size:18px;
+   font-weight: 500px;
+   font-style: oblique;
+}
 @media (max-width:960px){
    
 }

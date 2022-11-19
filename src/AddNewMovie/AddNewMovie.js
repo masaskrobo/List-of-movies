@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../AddNewMovie/AddNewMovie.css'
 
 function AddNewMovie({onNewMovie}){
     const[newMovie,setNewMovie]=useState('');
@@ -6,59 +7,47 @@ function AddNewMovie({onNewMovie}){
     const[actor,setNewActor]=useState('');
     const[actors,setActors]=useState([])
    
-
-    const Actors = ['Johnny Depp', 'Will Smith', 'Leonardo DiCaprio', 'Angelina Jolie', 'Robin Williams', 'Sandra Bullock', 'Meryl Streep', 
-    'Julia Roberts']
-
-    {Actors.map(function(act){
-       return <p>{act}</p>
-    })}
-    
-    
-
     function AddText(event){
-        setNewMovie(event.target.value)
-      
-    }
-    function AddGenre(event){
-        setNewStyle(event.target.value)
+        setNewMovie(event.target.value)}
 
-    }
+    function AddGenre(event){
+        setNewStyle(event.target.value)}
+
     function AddMainActor(event){
-        setNewActor(event.target.value)
-    }
+        setNewActor(event.target.value)}
    
-    
-    
     function NewMovie(){
-        onNewMovie(newMovie,style,actor,actors)
+        onNewMovie(newMovie,style,actors)
         setNewMovie('');
         setNewStyle('');
-        setNewActor('');
-        setActors('')
+        setNewActor(''); }
 
-    }
-    function AddActors(actor){
-        Actors.push(actor)
-        
-    }
-   
-   
+    function AddActors(){
+       setActors([...actors,actor]) }
    
 
     return(
-        <div>
-            <label>Add new movie:</label>
-            <input placeholder='Add new movie' value={newMovie} onChange={AddText} type='text'></input>
-            <label>Add genre:</label>
-            <input placeholder='Add genre' type='text' value={style} onChange={AddGenre}></input>
-            <label>Add main actors:</label>
-            <input placeholder='Main actors' type='text' onChange={AddMainActor} value={actor}></input>
-            <button onClick={NewMovie}>Add</button>
-            <button onClick={AddActors}>Add Actor</button>
-           
+      <div className='form__container'>
+              <div className='form__container_box'>
+                   <label className='form_box__text'>Add new movie:</label>
+                   <input className='form_box__input' placeholder='Add new movie' value={newMovie} onChange={AddText} type='text'></input>
+              </div>
+
+              <div className='form__container_box'>
+                   <label className='form_box__text'>Add genre:</label>
+                   <input className='form_box__input' placeholder='Add genre' type='text' value={style} onChange={AddGenre}></input>
+             </div>
+
+             <div className='form__container_box'> 
+                   <label className='form_box__text'>Add main actors:</label>
+                   <input className='form_box__input' placeholder='Main actors' type='text' onChange={AddMainActor} value={actor}></input>
+             </div> 
+             <div className='button__box'>
+                   <button className='button__box__add__actor' onClick={AddActors}>Add Actor</button>
+                   <button className='button__box__add' onClick={NewMovie}>Add</button>  
+             </div>   
+        </div> 
             
-        </div>
     )
 }
 export default AddNewMovie;

@@ -1,0 +1,49 @@
+.movie_container__holder{
+    background-color: white;
+    margin-right: 15px;
+    margin-top: 30px;
+    padding:20px 50px ;
+    width: 20%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.movie_container__holder__text{
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: oblique;   
+}
+.movie_container__holder__genre{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color:rgb(26, 100, 220);
+}
+.movie_container__holder__actor{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.icons__holder{
+    display: flex;
+    justify-content: space-between;
+}
+.button_trash{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.trash__icons{
+    color: rgb(243, 99, 22); 
+    font-size: 27px;
+}
+.button_reaction{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.reaction_icons{
+    color: rgb(26, 100, 220);
+    font-size: 27px;    
+}
+

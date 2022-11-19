@@ -1,0 +1,46 @@
+.form__container{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.form__container_box{
+   width: 20%;
+   
+}
+.form_box__text{
+    font-size: 18px;
+    font-style: oblique;
+}
+.form_box__input{
+    border-radius: 5px;
+    border: none;
+    padding: 10px 47px 10px 7px;
+    margin-top: 7px;  
+}
+.button__box{
+    padding-top: 32px;
+}
+.button__box__add{
+    padding: 7px 22px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(243, 99, 22) ;
+    cursor: pointer;
+    margin-right: 10px;   
+}
+.button__box__add__actor{
+    padding: 7px 22px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color:  rgb(243, 99, 22);
+    cursor: pointer;
+    margin-right:10px ;
+
+}
+@media (max-width:960px){
+   
+}

@@ -14,8 +14,9 @@
 .form_box__input{
     border-radius: 5px;
     border: none;
-    padding: 10px 47px 10px 7px;
-    margin-top: 7px;  
+    width: 200px;
+    margin-top: 7px; 
+    padding: 10px;
 }
 .button__box{
     padding-top: 32px;

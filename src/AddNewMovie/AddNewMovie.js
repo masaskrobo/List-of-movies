@@ -18,20 +18,19 @@ function AddNewMovie({onNewMovie}){
         }
    
     function NewMovie(){
-        onNewMovie(newMovie,style,actors)
-        setNewMovie('');
-        setNewStyle('');
-        setNewActor('');
+        if(newMovie !== '' && style !== ''){  
+            onNewMovie(newMovie,style,actors)
+            setNewMovie('');
+            setNewStyle('');
+            setNewActor('');
+        }
        }
 
     function AddActors(){
        setActors([...actors,actor])
        setNewActor('')
-       
-       
        }
-   
-
+    
     return(
       <div className='form__container'>
        
@@ -50,8 +49,10 @@ function AddNewMovie({onNewMovie}){
                    <input className='form_box__input' placeholder='Main actors' type='text'  onChange={AddMainActor} value={actor}></input>
              </div> 
              <div className='button__box'>
-                   <button className='button__box__add__actor' onClick={AddActors}>Add Actor</button>
-                   <button className='button__box__add' onClick={NewMovie}>Add</button>  
+                   <button className='button__box__add__actor'  onClick={AddActors}>Add Actor</button>
+                   <button className='button__box__add' onClick={NewMovie}>Add</button> 
+                   
+                   
                    {actors.map(function(act){
                           return <p className='add_actors'>{act}</p>
         })} 

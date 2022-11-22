@@ -27,8 +27,16 @@
 }
 .movie_container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     
+}
+
+
+@media (max-width:520px){
+    .movie_container{
+        display: block;
+        margin-top: 40px;
+    }
 }

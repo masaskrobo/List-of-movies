@@ -46,3 +46,21 @@
     font-size: 27px;    
 }
 
+
+
+@media (max-width:835px){
+    .movie_container__holder{
+        width: 25%;
+    }
+}
+@media (max-width:835px){
+    .movie_container__holder{
+        width: 25%;
+    }
+}
+@media (max-width:520px){
+    .movie_container__holder{
+        margin: auto;
+        margin-bottom: 37px;
+    }
+}

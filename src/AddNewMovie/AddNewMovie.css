@@ -8,7 +8,7 @@
    
 }
 .form_box__text{
-    font-size: 18px;
+    font-size: 17px;
     font-style: oblique;
 }
 .form_box__input{
@@ -47,6 +47,45 @@
    font-weight: 500px;
    font-style: oblique;
 }
+
+
+
 @media (max-width:960px){
+    .form__container{
+        max-width: 100%;
+    }
+    .form__container_box {
+        width: 25%;
+    }
    
+}
+@media (max-width:912px){
+    .form__container_box{
+        width: 47%;
+    }
+    .button__box__add__actor{
+        margin-bottom: 10px;
+    } 
+   
+}
+@media (max-width: 866px){
+    .button__box__add__actor{
+        padding: 10px;
+    } 
+}
+@media (max-width: 815px){
+    .form_box__input{
+        width: 180px;
+    }
+}
+@media (max-width: 751px){
+    .form__container{
+        display: block;
+        width: 48%;
+        margin: auto;
+    }
+    .form_box__text{
+       white-space: pre;
+       
+    }   
 }
